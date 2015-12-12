@@ -1,4 +1,6 @@
-# Description of this example is provided in NTRU.md
+#####################
+#Copyright Intangere#
+#####################
 
 from ntru import *
 import random
