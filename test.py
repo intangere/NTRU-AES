@@ -12,7 +12,7 @@ i = 1
 while i < 21:
 	msg = str(randint(0, 999999999999999999999))
 	pub, params = n.generateNTRUKeysAlpha()
-	#msg = base64.b64encode("I like penis in my ass :^|")
+	#msg = base64.b64encode("I like pie :^|")
 	#msg = base64.b64encode(msg)
 	#msg = [n.idxs[x] for x in msg]
 	#aesParts = n.splitNthChar(128, msg)
