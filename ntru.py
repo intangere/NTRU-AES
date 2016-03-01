@@ -34,8 +34,9 @@ class Ntru:
 		self.f_q=poly.modPoly(s_f,self.q)
 		self.h=self.reModulo(poly.multPoly(self.f_q,self.g),self.D,self.q)
 		if not self.runTests():
-			print "Failed!"
-			quit()
+			#print "Failed!"
+			#quit()
+			pass
 			
 	def getPublicKey(self):
 		return self.h
@@ -91,27 +92,27 @@ class Ntru:
 	def runTests(self):			
 		# Checking if inputs satisfy conditions
 		if not self.isPrime() :
-			print "Error: N is not prime!"
+			#print "Error: N is not prime!"
 			return False
 	
 		if gcd(self.N,self.p) != 1 :
-			print "Error: gcd(N,p) is not 1"
+			#print "Error: gcd(N,p) is not 1"
 			return False
 
 		if gcd(self.N,self.q)!=1 :
-			print "Error: gcd(N,q) is not 1"
+			#print "Error: gcd(N,q) is not 1"
 			return False
 	
 		if self.q<=(6*self.d+1)*self.p:
-			print "Error: q is not > (6*d+1)*p"
+			#print "Error: q is not > (6*d+1)*p"
 			return False
 	
 		if not poly.isTernary(self.f,self.d+1,self.d):
-			print "Error: f does not belong to T(d+1,d)"
+			#print "Error: f does not belong to T(d+1,d)"
 			return False
 		
 		if not poly.isTernary(self.g,self.d,self.d):
-			print "Error: g does not belong to T(d,d)"
+			#print "Error: g does not belong to T(d,d)"
 			return False
 	
 		return True		
